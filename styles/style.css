@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+/* Fontes */
+@font-face {
+    font-family: 'idroid';
+    src: url('../font/idroid.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../font/BebasNeue-Regular.ttf') format('truetype');
+}
+
+/* Paleta de cores para Saúde Mental */
+:root {
+    --color0: #e8f5f8; /* fundo geral */
+    --color1: #b2dfdb; /* verde claro suave */
+    --color2: #80cbc4; /* verde médio */
+    --color3: #4db6ac; /* verde destaque */
+    --color4: #00897b; /* verde escuro */
+    --color5: #00695c; /* verde ainda mais escuro */
+
+    --font-default: Arial, Verdana, Helvetica, sans-serif;
+    --font-highlight: 'Bebas Neue', cursive;
+    --font-campaign: 'idroid', cursive;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: var(--font-default);
+    background-color: var(--color0);
+}
+
+/* Header */
+header {
+    background-image: linear-gradient(to bottom, var(--color3), var(--color5));
+    min-height: 180px;
+    text-align: center;
+    padding-top: 40px;
+}
+header > h1 {
+    color: white;
+    font-family: var(--font-highlight);
+    font-size: 3.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+header > p {
+    color: white;
+    font-size: 1.3em;
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Menu de navegação */
+nav {
+    background-color: var(--color5);
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+nav > a {
+    color: var(--color1);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+nav > a:hover {
+    background-color: var(--color3);
+    color: white;
+}
+
+/* Conteúdo principal */
+main {
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+main h1 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color5);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+main h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color4);
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, var(--color1), transparent);
+    padding-left: 8px;
+}
+main p {
+    font-size: 1.1em;
+    line-height: 1.8em;
+    text-align: justify;
+    padding: 0 20px;
+    text-indent: 30px;
+    margin-bottom: 20px;
+}
+main picture {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+}
+main picture img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+main a {
+    color: var(--color5);
+    background-color: var(--color1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Video responsivo */
+div.video {
+    background-color: var(--color5);
+    margin: 20px 0;
+    padding: 20px;
+    padding-bottom: 56.25%;
+    position: relative;
+    border-radius: 8px;
+}
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/* Área de dicas */
+aside {
+    background-color: var(--color1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+aside > h3 {
+    background-color: var(--color4);
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 15px -20px;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.3em;
+}
+aside > ul {
+    list-style-type: '💚 ';
+    padding-left: 20px;
+}
+aside > ul > li {
+    margin: 8px 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--color5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+footer a {
+    color: var(--color1);
+    font-weight: bold;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    main picture img {
+        width: 90%;
+        max-width: none;
+        margin: 0 auto;
+    }
+    header h1 {
+        font-size: 3em;
+    }
+    main h1 {
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    main h2 {
+        font-size: 1.4em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    main p {
+        font-size: 1em;
+        line-height: 1.6em;
+        text-align: justify;
+        padding: 0 10px;
+    }
+    main a {
+        font-size: 1em;
+    }
+    nav {
+        align-items: center;
+        gap: 10px;
+    }
+    aside {
+        padding: 15px;
+    }
+    aside h3 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    aside ul {
+        columns: 1;
+    }
+}
+
+/* Global */
+html {
+    scroll-behavior: smooth;
+}
