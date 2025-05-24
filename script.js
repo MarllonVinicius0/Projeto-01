@@ -38,10 +38,25 @@ form.addEventListener('submit',function(evento){
         aviso.textContent = "Por favor, preencha todos os campos!"
         return;
     }
+    let formulariosSalvos = localStorage.getItem('formularios');
+    if(formulariosSalvos){
+        try {
+            formulariosSalvos = JSON.parse(formulariosSalvos);
+            if (!Array.isArray(formulariosSalvos)) {
+                formulariosSalvos = [];
+            }
+        } catch (e) {
+            formulariosSalvos = [];
+        }
+    }else{
+        formulariosSalvos = [];
+    }
+
+    formulariosSalvos.push(dadosFormulario);
 
     aviso.style.color = "green";
     aviso.textContent = "Mensagem enviada com sucesso!";
-    localStorage.setItem('formulario',JSON.stringify(dadosFormulario))
+    localStorage.setItem('formularios',JSON.stringify(formulariosSalvos))
     form.reset(); //limpar o formulário
 
     setTimeout(function() {
