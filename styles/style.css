@@ -59,6 +59,34 @@ header > p {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
+header button {
+    background: none;
+    border: 1.5px solid var(--color1);
+    color: var(--color1);
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    line-height: 1.1;
+}
+header button:hover {
+    background: var(--color3);
+    color: #fff;
+    border-color: var(--color3);
+}
+body.escuro header button {
+    border-color: #80cbc4;
+    color: #80cbc4;
+    background: none;
+}
+body.escuro header button:hover {
+    background: #4db6ac;
+    color: #fff;
+    border-color: #4db6ac;
+}
+
 /* Menu de navegação */
 nav {
     background-color: var(--color5);
