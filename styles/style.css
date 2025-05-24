@@ -244,3 +244,66 @@ footer a:hover {
 html {
     scroll-behavior: smooth;
 }
+
+body.escuro {
+    background-color: #181f1b;
+    color: #e0e0e0;
+}
+
+body.escuro a {
+    color: #80cbc4;
+    background-color: #26332e;
+}
+
+body.escuro a:hover {
+    background-color: #4db6ac;
+    color: #fff;
+}
+
+body.escuro header,
+body.escuro nav,
+body.escuro footer {
+    background-color: #26332e;
+    color: #e0e0e0;
+}
+
+body.escuro header > h1,
+body.escuro header > p {
+    color: #e0e0e0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+body.escuro nav > a {
+    color: #b2dfdb;
+    background-color: #26332e;
+}
+
+body.escuro nav > a:hover {
+    background-color: #4db6ac;
+    color: #fff;
+}
+
+body.escuro main {
+    background: #232b26;
+    color: #e0e0e0;
+}
+
+body.escuro main h1,
+body.escuro main h2 {
+    color: #80cbc4;
+    background: linear-gradient(to right, #26332e 60%, transparent);
+}
+
+body.escuro aside {
+    background-color: #26332e;
+    color: #e0e0e0;
+}
+
+body.escuro aside > h3 {
+    background-color: #00897b;
+    color: #fff;
+}
+
+body.escuro div.video {
+    background-color: #00897b;
+}
