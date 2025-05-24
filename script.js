@@ -1,5 +1,6 @@
+//Modo escuro
 const botaoTema = document.getElementById('btn-tema');
-const corpo = document.body;
+const corpo = document.body; 
 
 if(localStorage.getItem('tema') === 'escuro'){
     corpo.classList.add('escuro');
@@ -13,4 +14,38 @@ botaoTema.addEventListener('click', () =>{
     }else{
         localStorage.setItem('tema','claro');
     }
+});
+
+//Validacao Forms
+
+const form = document.getElementById('form-contato');
+const aviso = document.getElementById('aviso');
+
+form.addEventListener('submit',function(evento){
+    evento.preventDefault(); //impedir o envio antes de verificar
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    const dadosFormulario = {
+        nome: nome,
+        email: email,
+        mensagem: mensagem
+};
+
+    if(!nome || !email || !mensagem){
+        aviso.textContent = "Por favor, preencha todos os campos!"
+        return;
+    }
+
+    aviso.style.color = "green";
+    aviso.textContent = "Mensagem enviada com sucesso!";
+    localStorage.setItem('formulario',JSON.stringify(dadosFormulario))
+    form.reset(); //limpar o formulário
+
+    setTimeout(function() {
+    aviso.style.color = "red"; 
+    aviso.textContent = ""; 
+}, 2000);
 });

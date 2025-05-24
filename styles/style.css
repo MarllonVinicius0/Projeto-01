@@ -206,6 +206,9 @@ aside > ul > li {
     margin: 8px 0;
 }
 
+p#aviso{
+    color: red;
+}
 /* Rodapé */
 footer {
     background-color: var(--color5);
