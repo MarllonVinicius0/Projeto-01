@@ -1,3 +1,5 @@
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deploy-green?style=flat&logo=github)](https://marllonvinicius0.github.io/Projeto-01/)
+ 
 # 🧠 [Saúde Mental Importa](https://marllonvinicius0.github.io/Projeto-01/)
 
 Este projeto é um site de **Campanha de Conscientização sobre Saúde Mental**, criado com o objetivo de promover o cuidado emocional, o acolhimento e a valorização da saúde mental na sociedade.
@@ -10,6 +12,7 @@ O site apresenta informações importantes sobre o tema, dicas práticas de cuid
 
 - **HTML5** — Estruturação semântica do conteúdo
 - **CSS3** — Estilização externa e responsiva
+- **JavaScript** — Funcionalidades do site
 - **Media Queries** — Responsividade para diferentes dispositivos
 - **Fonte Bebas Neue** — Para dar destaque ao título principal
 - **Imagens Otimizadas** — Adaptadas para desktop e mobile
@@ -29,12 +32,23 @@ O site apresenta informações importantes sobre o tema, dicas práticas de cuid
 
 ---
 
+## 💡 Funcionalidades com JavaScript
+
+Este site utiliza JavaScript para tornar a experiência mais dinâmica e interativa. Foram implementadas as seguintes funcionalidades:
+
+- 🌗 **Modo Claro/Escuro** — O usuário pode alternar o tema da página, com a preferência salva no navegador (`localStorage`).
+- ✅ **Validação de Formulário** — O formulário de contato exige preenchimento de nome, e-mail e mensagem.
+- ☰ **Menu Mobile** — Ao acessar o site em telas menores, o menu se adapta com um botão que abre/fecha os links.
+- 🕒 **Relógio em Tempo Real** — O rodapé exibe a data e hora atualizadas automaticamente.
+
+---
+
 ## 🔗 Acesso Rápido
 
 - **Início** — Introdução ao tema
 - **Dicas** — 5 passos para cuidar da saúde mental
 - **Artigos** — Redirecionamento para revistas científicas confiáveis
-- **Contato** — (A ser desenvolvido)
+- **Contato** — Redirecionamento para CVV (Centro de Valorização da Vida)
 
 ---
 
@@ -71,6 +85,7 @@ favicon.ico
 - Deploy em servidor gratuito como GitHub Pages ou Vercel
 
 ---
+
 
 ## 👨‍💻 Autor
 
