@@ -15,12 +15,14 @@
         <p>Promovendo o cuidado, o acolhimento e a valorização da saúde emocional</p>
     </header>
     
-    <nav>
+    <nav id="nav">
+        <button id="btn-mobile" aria-label="Abrir Menu">☰ Menu</button>
         <a href="#inicio">Início</a>
         <a href="#dicas">Dicas</a>
-        <a href ="https://www.ncbi.nlm.nih.gov/pmc/?term=mental+health" target="_blank"> Artigos</a>
-        <a href=" https://cvv.org.br" target="_blank">Contato</a>
+        <a href ="https://www.ncbi.nlm.nih.gov/pmc/?term=mental+health" rel="noopener noreffer" target="_blank"> Artigos</a>
+        <a href=" https://cvv.org.br" rel="noopener noreffer"  target="_blank">Contato</a>
     </nav>
+    
     
     <main>
         <article id="inicio">
@@ -72,7 +74,7 @@
                 <label for="mensagem">Mensagem:</label><br>
                 <textarea name="mensagem" id="mensagem"></textarea><br><br>
 
-                <button type="submit">Enviar</button>
+                <button id="submit" type="submit">Enviar</button>
             </form>
             <p id="aviso"></p>
         </section>
@@ -80,6 +82,7 @@
 
     <footer>
         <p>Campanha desenvolvida por <a href="https://github.com/MarllonVinicius0" target="_blank">Marllon Vinícius</a></p>
+        <p id="hora-atual"></p>
     </footer>
 
     <script src="script.js"></script>

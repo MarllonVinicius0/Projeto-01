@@ -64,3 +64,26 @@ form.addEventListener('submit',function(evento){
     aviso.textContent = ""; 
 }, 2000);
 });
+
+//Menu Mobile
+
+const btnMobile = document.getElementById('btn-mobile')
+const nav = document.getElementById('nav')
+
+btnMobile.addEventListener('click',() =>{
+    nav.classList.toggle('ativo');
+});
+
+
+
+//Hora no rodape
+function atualizarHora(){
+    const now = new Date();
+    const hora = now.toLocaleTimeString('pt-BR');
+    const data = now.toLocaleDateString('pt-BR');
+    document.getElementById('hora-atual').textContent = `Hoje é ${data},${hora}`;
+}
+
+
+setInterval(atualizarHora,1000);
+atualizarHora();

@@ -88,7 +88,7 @@ body.escuro header button:hover {
 }
 
 /* Menu de navegação */
-nav {
+nav#nav {
     background-color: var(--color5);
     padding: 12px;
     display: flex;
@@ -96,7 +96,7 @@ nav {
     gap: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
-nav > a {
+nav#nav > a {
     color: var(--color1);
     text-decoration: none;
     font-weight: bold;
@@ -104,9 +104,21 @@ nav > a {
     border-radius: 6px;
     transition: background 0.3s;
 }
-nav > a:hover {
+nav#nav > a:hover {
     background-color: var(--color3);
     color: white;
+}
+
+/* Menu de navegação Mobile */ 
+#btn-mobile{
+    display: none;
+    background-color: var(--color3);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Conteúdo principal */
@@ -226,8 +238,14 @@ footer a:hover {
     text-decoration: underline;
 }
 
+footer p#hora-atual{
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #ccc;
+}
+
 /* Estilos para telas pequenas (celulares) */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     main picture img {
         width: 90%;
         max-width: none;
@@ -236,6 +254,33 @@ footer a:hover {
     header h1 {
         font-size: 3em;
     }
+
+    nav#nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav#nav a{
+        display: none;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        background-color: var(--color5);
+    }
+
+    nav#nav.ativo a{
+        display: block;
+    }
+
+    #btn-mobile{
+        background-color:#025a50;
+        display: block;
+        width: 100%;
+        padding: 10px;
+       
+    }
+
     main h1 {
         font-size: 1.8em;
         text-align: center;
@@ -255,10 +300,7 @@ footer a:hover {
     main a {
         font-size: 1em;
     }
-    nav {
-        align-items: center;
-        gap: 10px;
-    }
+    
     aside {
         padding: 15px;
     }
@@ -268,6 +310,46 @@ footer a:hover {
     }
     aside ul {
         columns: 1;
+    }
+
+    input{
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid var(--color3);
+    }
+
+    textarea{
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid var(--color3);
+    }
+
+    button#submit{
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--color3);
+        color: white;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+    button#btn-tema{
+        display: block;
+        margin: 10px auto;
+        background-color: var(--color3);
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 5px;
+        cursor: pointer;
     }
 }
 
@@ -304,12 +386,22 @@ body.escuro header > p {
     text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
-body.escuro nav > a {
+body.escuro button#btn-mobile {
+    background-color: #428680;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.escuro nav#nav > a {
     color: #b2dfdb;
     background-color: #26332e;
 }
 
-body.escuro nav > a:hover {
+body.escuro nav#nav > a:hover {
     background-color: #4db6ac;
     color: #fff;
 }
@@ -337,4 +429,10 @@ body.escuro aside > h3 {
 
 body.escuro div.video {
     background-color: #00897b;
+}
+
+body.escuro footer p#hora-atual{
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #ccc;
 }
