@@ -87,3 +87,18 @@ function atualizarHora(){
 
 setInterval(atualizarHora,1000);
 atualizarHora();
+
+// Frases API + MVC 
+
+document.addEventListener("DOMContentLoaded",()=>{
+    const idsFrase = {
+        frase: "frase-inspiradora",
+        autor: "autor-frase",
+        botao: "btn-nova-frase"
+    };
+
+    if(document.getElementById(idsFrase.botao)){
+        const ContentController = new FraseController(idsFrase.frase,idsFrase.autor,idsFrase.botao);
+        ContentController.init();
+    }
+})

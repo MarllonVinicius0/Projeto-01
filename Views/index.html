@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <title>Conscientização sobre Saúde Mental</title>
 </head>
@@ -35,7 +35,7 @@
             <p>Falar sobre saúde mental não é sinal de fraqueza. Pelo contrário: é um ato de coragem. Buscar ajuda, praticar o autocuidado e respeitar seus limites são passos importantes para uma vida mais equilibrada e feliz.</p>
 
             <picture>
-                <img src="img/saude-mental.jpg" alt="Ilustração de saúde mental: mente desorganizada e organizada">
+                <img src="../assets/img/saude-mental.jpg" alt="Ilustração de saúde mental: mente desorganizada e organizada">
             </picture>
 
             <p>Práticas como meditação, exercícios físicos, alimentação saudável e boas noites de sono são grandes aliadas no cuidado da mente.</p>
@@ -59,9 +59,21 @@
                 </ul>
 
             </aside>
+
+            <section id="inspiracao" class="frase-container">
+                <h2>Uma Frase para Inspirar seu Dia</h2>
+                <blockquote>
+                    <p id="frase-inspiradora">Clique no botão abaixo para carregar uma frase.</p>
+                    <cite id="autor-frase"></cite>
+                </blockquote>
+                <button id="btn-nova-frase">Ler uma frase inspiradora</button>
+            </section>
+            <section id="contato">
+                <h2>Fale Conosco</h2>
             
             <p>Cuidar da mente é tão importante quanto cuidar do corpo. Juntos, podemos construir uma sociedade mais acolhedora e saudável emocionalmente.</p>
         </article>
+        
         <section id="contato">
             <h2>Fale Conosco</h2>
             <form  id="form-contato">
@@ -85,6 +97,8 @@
         <p id="hora-atual"></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../Model/FraseModel.js"></script>
+    <script src="../controllers/FraseController.js"></script>
+    <script src="../js/Main.js"></script>
 </body>
 </html>
